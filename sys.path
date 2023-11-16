@@ -1,0 +1,4 @@
+import sys
+sys.path.insert(0,'/Users/valerpi/Projects/Module2-project001-test')
+
+# use in REPL>>> export PYTHONPATH=$PYTHONPATH:`pwd` if doesn't work

@@ -1,18 +1,22 @@
 # {{PROBLEM}} Function Design Recipe
 
-
-
 ## 1. Describe the Problem
 
+As a user
+So that I can keep track of my tasks
+I want to check if a text includes the string #TODO.
 
 
 ## 2. Design the Function Signature
 
 
 ```python
-def ():
+def check_todos(text):
+    # detect the intention to store a TODO note
     # Parameters:
-    # Returns: (state the return value and its type)
+    #    a string which contains #TODO 
+    # Returns:
+    #    a sub-string of the input text witout the #TODO  
     # Side effects: this function doesn't print anything or have any other side-effects
     pass 
 ```
@@ -21,10 +25,34 @@ def ():
 
 ```python
 """
+given an empty text
+return an Error 
+"""
+test_text_is_empty()
+==>  return Error
 
 """
-func() ==>  return
+given a None value
+return an Error
+"""
+test_text_is_none()
+==>  return Error
 
+"""
+given a text without a #TODO
+return an empty string
+"""
+test_text_if_not_todo()
+#"I stayed out fifteen minutes, and then went back, hoping for better luck. Fill the E30 form by tomorrow.")
+==>  return
+
+"""
+given a text with a #TODO
+return the cropped text (ready to be stored by the main method)
+"""
+test_text_if_is_todo()
+#"I stayed out fifteen minutes, and then went back, hoping for better luck. #TODO Fill the E30 form by tomorrow.")
+==>  return
 ```
 
 
@@ -45,9 +73,9 @@ from  import *
 """
 Given a ....
 """
-def test_extract_uppercase_with_upper_then_lower():
-    result = extract_uppercase("hello WORLD")
-    assert result == ["WORLD"]
+def test_():
+    result = func("")
+    assert result == [""]
 
 ```
 
