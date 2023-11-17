@@ -17,7 +17,7 @@ def encode(text, key):
     return "".join(ciphertext_chars)
 
 
-def decode(encrypted, key):
+def decode(encrypted, key):  
     cipher = make_cipher(key)
 
     plaintext_chars = []
