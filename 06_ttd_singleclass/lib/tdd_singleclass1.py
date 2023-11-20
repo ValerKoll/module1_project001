@@ -33,25 +33,6 @@ class Tasks():
     
     
     
-    
-    
-    
-    
-    
-    
-    def get_tasks2(self):
-        if not len(self.tasks_dict):
-            return None
-        #text_to_print = "\033[0;31m==== SONGS NOT LISTENED YET ====\n"
-        list_to_print1 = [(f"#{key} - {item['Title'].upper()}: {item['content']}\n") for key, item in self.tasks_dict.items() if item['completed']==False]
-        #text_to_print += "\033[0;36m==== SONGS LISTENED ====\n"
-        list_to_print2 = [(f"#{key} - {item['Title'].upper()}: {item['content']}\n") for key, item in self.tasks_dict.items() if item['completed']==True]
-        return list_to_print1 + list_to_print2
-    
-    
-    
-    
-    
 t = Tasks()
 t.add_tasks("Wsdsd", "Wsdsd")
 t.add_tasks("Ws", "skdlsjdlkjsld;")
