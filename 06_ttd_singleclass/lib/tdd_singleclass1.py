@@ -8,8 +8,6 @@ class Tasks():
             title_to_add = "Untitled"
         if content_to_add == "":
             return None
-        #index = int(list(self.tasks_dict)[-1])
-        #self.tasks_dict[str(index+1)] = f"{title_to_add.capitalize()}: {content_to_add.lower()}"
         self.__index += 1
         self.tasks_dict[str(self.__index)] = {'Title':title_to_add, 'content':content_to_add, 'completed':False}
         return "Entry Added"
@@ -28,14 +26,40 @@ class Tasks():
     def flag_completed(self, task_id):
         self.tasks_dict[str(task_id)]['completed'] = True
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    def get_tasks2(self):
+        if not len(self.tasks_dict):
+            return None
+        #text_to_print = "\033[0;31m==== SONGS NOT LISTENED YET ====\n"
+        list_to_print1 = [(f"#{key} - {item['Title'].upper()}: {item['content']}\n") for key, item in self.tasks_dict.items() if item['completed']==False]
+        #text_to_print += "\033[0;36m==== SONGS LISTENED ====\n"
+        list_to_print2 = [(f"#{key} - {item['Title'].upper()}: {item['content']}\n") for key, item in self.tasks_dict.items() if item['completed']==True]
+        return list_to_print1 + list_to_print2
+    
+    
+    
+    
+    
 t = Tasks()
 t.add_tasks("Wsdsd", "Wsdsd")
 t.add_tasks("Ws", "skdlsjdlkjsld;")
 t.add_tasks("Not", "skdlsjdlkjsld;")
 t.add_tasks("YES", "skdlsjdlkjsld;")
 t.add_tasks("But", "skdlsjdlkjsld;")
-print(t.get_tasks())
+print(t.get_tasks2())
 t.flag_completed(2)
-print(t.get_tasks())
+print(t.get_tasks2())
 t.flag_completed(4)
-print(t.get_tasks())
+print(t.get_tasks2())

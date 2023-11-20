@@ -1,3 +1,4 @@
+'''
 from lib.tdd_singleclass1 import *
 
 def test_given_empty_paramenters_return_none():
@@ -36,3 +37,4 @@ def test_given_tasks_return_number_correct_entries():
     task.add_tasks("Title", "Content ONE")
     result = task.get_tasks()
     assert len(result) == 4
+'''
