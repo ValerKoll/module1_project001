@@ -29,3 +29,4 @@ class SongTracker():
         if song_number > self.__counter:
             raise Exception("No song in the database")
         self.__songs_dict[str(song_number)]['listen'] = True
+        

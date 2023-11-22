@@ -1,5 +1,5 @@
 def check_todos(text):
-    if any([text == "", text == None]):
+    if any([text == "", text == None]):  
         raise Exception("The input parameter is not valid!")
     if '#TODO' not in text:
         return ""
