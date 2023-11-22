@@ -1,4 +1,4 @@
-# GS08 Design a class system
+# GS09 Design a class system
 
 ### Request
 
